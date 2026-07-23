@@ -8,6 +8,18 @@
 
 **Que**.What is an LLM?
 
+**Ans**: LLM is Large Language Model is the process where models are trained on huge dataset to understand and generate human like text
+
+**Que**.Why does an AI application usually have a backend?
+
+**Ans**: To protect api keys, to call database or any other service, to validate request
+
+
+**Que**.Draw (or describe) the basic AI application architecture we discussed.
+
+**Ans**: In AI Applicaion architetcure user enters prompt which is like information sending to AI chatbox to do particular task or ask any question then AI models take that input process on that text and returns output in LLM form. It uses tokens means is the small pieces of text model processes.
+
+
 Draw (or describe) the basic AI application architecture we discussed.
 In AI Applicaion architetcure user enters prompt which is like information sending to AI chatbox to do particular task or ask any question then AI models take that input process on that text and returns output in LLM form. It uses tokens means is the small pieces of text model processes.
 
@@ -97,13 +109,71 @@ Complete Architecture
                   │
                   ▼
         User sees streamed text
-**Ans**: LLM is Large Language Model is the process where models are trained on huge dataset to understand and generate human like text
-
-**Que**.Why does an AI application usually have a backend?
-
-**Ans**: To protect api keys, to call database or any other service, to validate request
 
 
-**Que**.Draw (or describe) the basic AI application architecture we discussed.
+        //Module 3
 
-**Ans**: In AI Applicaion architetcure user enters prompt which is like information sending to AI chatbox to do particular task or ask any question then AI models take that input process on that text and returns output in LLM form. It uses tokens means is the small pieces of text model processes.
+        Update your notes.md with:
+
+**Que** AI Application Architecture:
+
+User
+|
+React Frontend
+|
+Backend API
+|
+DB
+|
+DB response  + user prompt
+|
+claude api
+|
+backend 
+|
+fronend
+
+
+Que. Responsibilities of each layer
+1. Frontend Layer:
+Chat UI
+Prompt input
+Conversation history display
+Markdown rendering
+Code block rendering
+Copy button
+Retry button
+Stop generating
+Streaming text
+Loaders and error messages
+
+
+2. Backend Layer
+Authenticate users
+Validate requests
+Store API keys securely
+Call Claude API
+Query databases
+Save chat history
+Log requests
+Apply rate limiting
+Stream responses back
+
+
+3. Database Layer
+
+Databases store facts.
+
+4. Claude API
+Understand the prompt
+Process the provided context
+Generate the response
+Stream tokens
+
+
+Why databases are still needed
+Claude is not a database it's a LLM which generate response in natural lanaguage so we need database to store data(company's  or employess confidential) which is called by backend API for ex. 
+If user asks he want to purchase car and which is best in 2026  so clalude dont have information about car's related there backend api call will get details about car database the backend will send resposnse from db and user question/prompt to claude then claude will understabd that prompt and generate natural language response and wil send to backend and then backend will send that  to frontned 
+
+
+
