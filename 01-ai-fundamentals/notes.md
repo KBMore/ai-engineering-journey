@@ -177,3 +177,17 @@ If user asks he want to purchase car and which is best in 2026  so clalude dont 
 
 
 
+Q1. What is RAG?
+RAG (Retrieval-Augmented Generation) is a technique where an application first retrieves relevant information from external sources such as documents, databases, or knowledge bases. The retrieved information is then sent to the LLM as additional context, allowing it to generate a more accurate and relevant response.
+
+Q2. Why do enterprise AI applications use RAG?
+LLMs are trained on general knowledge and don't automatically have access to private or continuously changing company information.
+
+Q3. Who performs the retrieval?
+The backend performs retrieval because it has secure access to internal databases, document repositories, and business systems. After retrieving the relevant information, it sends both the user's question and the retrieved context to the LLM.
+
+Q4. Why can't Claude answer every company question by itself?
+Claude is not connected directly to your company's private systems.
+
+Q5. Database vs Knowledge Base
+A database is used for structured, frequently updated data such as user accounts, orders, inventory, or employee records. A knowledge base is used for unstructured information like documentation, policies, manuals, and FAQs. In a RAG system, the backend retrieves relevant information from these sources and provides it to the LLM as context before generating a response.
